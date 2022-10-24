@@ -5,8 +5,8 @@ public class Rugby {
 
         int[] team1;
         team1 = new int[25];
-        float sumAgeTeam1 = 0;
 
+        double sumAgeTeam1 = 0;
         int minAge = 18;
         int maxAge = 40;
         int range = maxAge - minAge + 1;
@@ -20,12 +20,13 @@ public class Rugby {
         }
 
         System.out.println();
-        System.out.println("Середній вік (команди № 1) - " + Math.round(sumAgeTeam1/team1.length));
+        System.out.println("Середній вік (команди № 1) - " + Math.round(sumAgeTeam1 / team1.length));
         System.out.println();
 
         int[] team2;
         team2 = new int[25];
-        float sumAgeTeam2 = 0;
+
+        double sumAgeTeam2 = 0;
 
         System.out.print("Вік членів команды №2: ");
         for (int i = 0; i < team2.length; i++) {
@@ -34,6 +35,6 @@ public class Rugby {
             System.out.print(team2[i] + ", ");
         }
         System.out.println();
-        System.out.println("Середній вік (команди № 2) - " + Math.round(sumAgeTeam2/team2.length));
+        System.out.println("Середній вік (команди № 2) - " + Math.round(sumAgeTeam2 / team2.length));
     }
 }
