@@ -23,13 +23,17 @@ public class CounterStrike {
         resultPolice = (policePlayer1 + policePlayer2 + policePlayer3 + policePlayer4 + policePlayer5) / 5.0;
         resultTerrorist = (terroristPlayer1 + terroristPlayer2 + terroristPlayer3 + terroristPlayer4 + terroristPlayer5) / 5.0;
 
-        if (resultPolice > resultTerrorist) {
-            result = resultPolice;
-            teamName = teamNamePolice;
+        if (resultPolice == resultTerrorist) {
+            System.out.println("Ничья...");
         } else {
-            result = resultTerrorist;
-            teamName = teamNameTerrorist;
+            if (resultPolice > resultTerrorist) {
+                result = resultPolice;
+                teamName = teamNamePolice;
+            } else {
+                result = resultTerrorist;
+                teamName = teamNameTerrorist;
+            }
+            System.out.println("Победила команда " + teamName + " набравшая " + result + " очков");
         }
-        System.out.println("Победила команда " + teamName + " набравшая " + result + " очков");
     }
 }
